@@ -78,3 +78,50 @@ postTweetBtn.addEventListener("click", () => {
     tweetInput.value = "";
 });
 
+// FOLLOW BUTTONS
+
+const followButtons = document.querySelectorAll(".follow button");
+
+followButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        if (button.textContent === "Follow") {
+            button.textContent = "Following";
+            button.style.backgroundColor = "#1d9bf0";
+        } else {
+            button.textContent = "Follow";
+            button.style.backgroundColor = "black";
+        }
+
+    });
+
+});
+
+// SEARCH BAR DEMO
+
+const searchInput = document.querySelector(".search-box input");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", () => {
+
+        const value = searchInput.value.toLowerCase();
+
+        const trends = document.querySelectorAll(".trend");
+
+        trends.forEach(trend => {
+
+            const trendText = trend.textContent.toLowerCase();
+
+            if (trendText.includes(value)) {
+                trend.style.display = "block";
+            } else {
+                trend.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
