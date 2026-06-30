@@ -170,3 +170,38 @@ document.addEventListener("click", (event) => {
     likeContainer.dataset.likes = likes;
 });
 
+// CHARACTER COUNTER
+
+const maxCharacters = 280;
+
+tweetInput.addEventListener("input", () => {
+
+    let countDisplay = document.getElementById("charCount");
+
+    if (!countDisplay) {
+
+        countDisplay = document.createElement("small");
+        countDisplay.id = "charCount";
+        countDisplay.style.display = "block";
+        countDisplay.style.marginTop = "10px";
+        countDisplay.style.color = "gray";
+
+        tweetInput.parentElement.appendChild(countDisplay);
+    }
+
+    const remaining =
+        maxCharacters - tweetInput.value.length;
+
+    countDisplay.textContent =
+        `${remaining} characters remaining`;
+
+    if (remaining < 0) {
+        countDisplay.style.color = "red";
+        postTweetBtn.disabled = true;
+    } else {
+        countDisplay.style.color = "gray";
+        postTweetBtn.disabled = false;
+    }
+
+});
+
