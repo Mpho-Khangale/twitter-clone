@@ -375,3 +375,169 @@ button {
     background: #1e2732;
     color: white;
 }
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .feed {
+        max-width: none;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e6ecf0;
+    }
+
+    .sidebar nav a span {
+        display: none;
+    }
+
+    .sidebar nav a {
+        justify-content: center;
+    }
+
+    .tweet-btn,
+    .dark-mode-btn {
+        width: 100%;
+    }
+
+    .feed {
+        border-right: none;
+    }
+
+    .tweet-stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* ==========================
+   LOW RESOLUTION PHONES
+   (320px - 480px)
+========================== */
+
+@media (max-width: 480px) {
+
+    /* overall spacing fix */
+    body {
+        font-size: 14px;
+    }
+
+    /* SIDEBAR becomes compact top bar style */
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 100;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sidebar nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .sidebar nav a span {
+        display: none; /* hide text, keep icons only */
+    }
+
+    /* FEED full width */
+    .feed {
+        width: 100%;
+        max-width: 100%;
+        border: none;
+    }
+
+    .feed-header h2 {
+        font-size: 18px;
+    }
+
+    /* TWEETS tighter spacing */
+    .tweet {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .tweet img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tweet-content h4 {
+        font-size: 14px;
+    }
+
+    .tweet-content p {
+        font-size: 14px;
+    }
+
+    .tweet-stats {
+        font-size: 12px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* RIGHT SIDEBAR hidden completely */
+    .right-sidebar {
+        display: none;
+    }
+
+    /* TWEET BOX compact */
+    .tweet-box {
+        padding: 10px;
+    }
+
+    .tweet-input textarea {
+        font-size: 14px;
+    }
+
+    .tweet-actions button {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* MODAL smaller */
+    .modal-content {
+        width: 95%;
+        margin: 60px auto;
+        padding: 15px;
+    }
+}
