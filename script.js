@@ -125,3 +125,48 @@ if (searchInput) {
     });
 
 }
+
+// LIKE TOGGLE 
+
+document.addEventListener("click", (event) => {
+
+    const heartIcon = event.target.closest(".fa-heart");
+
+    if (!heartIcon) return;
+
+    const likeContainer = heartIcon.parentElement;
+
+    // Get current likes safely from dataset OR text
+    let likes = Number(likeContainer.dataset.likes);
+
+    if (!likes) {
+        // read existing number in UI
+        likes = Number(
+            likeContainer.textContent.replace(/\D/g, "")
+        );
+    }
+
+    const isLiked = likeContainer.classList.contains("liked");
+
+    if (isLiked) {
+        // unlike → decrease
+        likes--;
+        likeContainer.classList.remove("liked");
+
+        likeContainer.innerHTML = `
+            <i class="far fa-heart"></i> ${likes}
+        `;
+    } else {
+        // like → increase
+        likes++;
+        likeContainer.classList.add("liked");
+
+        likeContainer.innerHTML = `
+            <i class="fas fa-heart"></i> ${likes}
+        `;
+    }
+
+    // save updated number
+    likeContainer.dataset.likes = likes;
+});
+
