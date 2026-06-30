@@ -329,3 +329,49 @@ button {
     font-size: 30px;
     cursor: pointer;
 }
+
+/* ==========================
+   DARK MODE
+========================== */
+
+.dark-mode {
+    background: #15202b;
+    color: white;
+}
+
+.dark-mode .sidebar,
+.dark-mode .feed,
+.dark-mode .feed-header {
+    background: #15202b;
+    color: white;
+    border-color: #38444d;
+}
+
+.dark-mode .tweet,
+.dark-mode .tweet-box {
+    border-color: #38444d;
+}
+
+.dark-mode .widget {
+    background: #1e2732;
+}
+
+.dark-mode textarea {
+    background: transparent;
+    color: white;
+}
+
+.dark-mode .search-box input {
+    background: #1e2732;
+    color: white;
+}
+
+.dark-mode .modal-content {
+    background: #1e2732;
+    color: white;
+}
+
+.dark-mode .dark-mode-btn {
+    background: #1e2732;
+    color: white;
+}
