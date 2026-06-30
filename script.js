@@ -205,3 +205,22 @@ tweetInput.addEventListener("input", () => {
 
 });
 
+// THEME
+
+if (localStorage.getItem("theme") === "dark") {
+
+    document.body.classList.add("dark-mode");
+    darkModeBtn.textContent = "☀️ Light Mode";
+
+}
+
+darkModeBtn.addEventListener("click", () => {
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+
+});
+
