@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Clone | Explore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-brands fa-x-twitter"></i>
+        </div>
+
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="explore.html" class="active">
+                <i class="fas fa-hashtag"></i>
+                <span>Explore</span>
+            </a>
+
+            <a href="#">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+            </a>
+
+            <a href="#">
+                <i class="fas fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+            <a href="#">
+                <i class="fas fa-bookmark"></i>
+                <span>Bookmarks</span>
+            </a>
+
+            <a href="#">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+
+            <a href="login.html">
+                <i class="fas fa-right-to-bracket"></i>
+                <span>Login</span>
+            </a>
+
+        </nav>
+
+        <button class="tweet-btn" id="openTweetModal">
+            Post
+        </button>
+
+        <button id="darkModeBtn" class="dark-mode-btn">
+            🌙 Dark Mode
+        </button>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="feed explore-feed">
+
+        <header class="feed-header">
+            <h1>Explore</h1>
+        </header>
+
+        <section class="explore-search" aria-label="Search trends">
+            <label for="exploreSearch" class="visually-hidden">Search trends</label>
+            <input
+                type="search"
+                id="exploreSearch"
+                placeholder="Search trends, topics, and hashtags">
+        </section>
+
+        <nav class="category-tabs" aria-label="Trend categories">
+            <button type="button" class="category-tab active" data-category="for-you">For You</button>
+            <button type="button" class="category-tab" data-category="trending">Trending</button>
+            <button type="button" class="category-tab" data-category="news">News</button>
+            <button type="button" class="category-tab" data-category="sports">Sports</button>
+            <button type="button" class="category-tab" data-category="entertainment">Entertainment</button>
+        </nav>
+
+        <section class="trending-section" aria-labelledby="trending-heading">
+            <h2 id="trending-heading" class="visually-hidden">Trending topics</h2>
+
+            <div id="trendingList">
+
+                <article class="trend-card" data-category="for-you trending">
+                    <small>Technology · Trending</small>
+                    <h3>#JavaScript</h3>
+                    <span>185K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="for-you trending">
+                    <small>Programming · Trending</small>
+                    <h3>#WebDevelopment</h3>
+                    <span>122K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="for-you">
+                    <small>Careers · Trending</small>
+                    <h3>#FrontendDeveloper</h3>
+                    <span>78K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="for-you trending">
+                    <small>Technology · Trending</small>
+                    <h3>#ArtificialIntelligence</h3>
+                    <span>256K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="trending">
+                    <small>Programming · Trending</small>
+                    <h3>#Python</h3>
+                    <span>94K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="for-you trending">
+                    <small>Frameworks · Trending</small>
+                    <h3>#ReactJS</h3>
+                    <span>67K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="news">
+                    <small>World · Trending</small>
+                    <h3>#BreakingNews</h3>
+                    <span>412K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="news">
+                    <small>Environment · Trending</small>
+                    <h3>#ClimateSummit</h3>
+                    <span>89K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="sports">
+                    <small>Sports · Trending</small>
+                    <h3>#WorldCup</h3>
+                    <span>530K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="sports">
+                    <small>Football · Trending</small>
+                    <h3>#PremierLeague</h3>
+                    <span>178K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="entertainment">
+                    <small>Movies · Trending</small>
+                    <h3>#Oscars2026</h3>
+                    <span>203K Posts</span>
+                </article>
+
+                <article class="trend-card" data-category="entertainment">
+                    <small>Streaming · Trending</small>
+                    <h3>#Netflix</h3>
+                    <span>145K Posts</span>
+                </article>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>No trends match your search.</p>
+        </section>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-sidebar">
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+
+        <section class="widget" aria-labelledby="happening-heading">
+            <h2 id="happening-heading">What's Happening</h2>
+
+            <article class="trend">
+                <small>Technology · Live</small>
+                <h4>Apple unveils new AI features</h4>
+                <span>32.4K Posts</span>
+            </article>
+
+            <article class="trend">
+                <small>Politics · Trending</small>
+                <h4>Global leaders meet in Geneva</h4>
+                <span>18.7K Posts</span>
+            </article>
+
+            <article class="trend">
+                <small>Sports · Trending</small>
+                <h4>Champions League final preview</h4>
+                <span>54.2K Posts</span>
+            </article>
+
+            <article class="trend">
+                <small>Entertainment · Trending</small>
+                <h4>New Marvel trailer drops</h4>
+                <span>91K Posts</span>
+            </article>
+        </section>
+
+        <section class="widget" aria-labelledby="follow-heading">
+            <h2 id="follow-heading">Who to Follow</h2>
+
+            <div class="follow">
+                <img src="https://i.pravatar.cc/100?img=10" alt="Mike Ross profile">
+                <div>
+                    <h4>Mike Ross</h4>
+                    <span>@mikeross</span>
+                </div>
+                <button type="button">Follow</button>
+            </div>
+
+            <div class="follow">
+                <img src="https://i.pravatar.cc/100?img=20" alt="Jessica Pearson profile">
+                <div>
+                    <h4>Jessica Pearson</h4>
+                    <span>@jpearson</span>
+                </div>
+                <button type="button">Follow</button>
+            </div>
+
+            <div class="follow">
+                <img src="https://i.pravatar.cc/100?img=33" alt="Elon Tech profile">
+                <div>
+                    <h4>Elon Tech</h4>
+                    <span>@elontech</span>
+                </div>
+                <button type="button">Follow</button>
+            </div>
+        </section>
+
+    </aside>
+
+    <!-- TWEET MODAL -->
+    <div class="modal" id="tweetModal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+
+        <div class="modal-content">
+
+            <button type="button" class="close-modal" aria-label="Close modal">&times;</button>
+
+            <h2 id="modal-title">Create Post</h2>
+
+            <textarea placeholder="What's happening?" rows="5"></textarea>
+
+            <button type="button">Post Tweet</button>
+
+        </div>
+
+    </div>
+
+    <script src="explore.js"></script>
+
+</body>
+</html>
