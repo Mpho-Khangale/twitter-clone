@@ -31,3 +31,50 @@ window.addEventListener("click", (event) => {
         tweetModal.style.display = "none";
     }
 });
+
+// POST NEW TWEET
+
+const postTweetBtn = document.getElementById("postTweetBtn");
+const tweetInput = document.getElementById("tweetInput");
+const tweetFeed = document.getElementById("tweetFeed");
+
+postTweetBtn.addEventListener("click", () => {
+
+    const tweetText = tweetInput.value.trim();
+
+    if (tweetText === "") {
+        alert("Please enter a tweet before posting.");
+        return;
+    }
+
+    const tweet = document.createElement("div");
+    tweet.classList.add("tweet");
+
+    tweet.innerHTML = `
+        <img
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile">
+
+        <div class="tweet-content">
+
+            <h4>
+                You
+                <span>@you · Just now</span>
+            </h4>
+
+            <p>${tweetText}</p>
+
+            <div class="tweet-stats">
+                <span><i class="far fa-comment"></i> 0</span>
+                <span><i class="fas fa-retweet"></i> 0</span>
+                <span><i class="far fa-heart"></i> 0</span>
+            </div>
+
+        </div>
+    `;
+
+    tweetFeed.prepend(tweet);
+
+    tweetInput.value = "";
+});
+
